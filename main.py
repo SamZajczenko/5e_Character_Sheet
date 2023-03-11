@@ -2,25 +2,15 @@ import math
 import random
 from random import randint
 
-# These will be the dice the character will use. 
-def roll(num, dice):
-  if num in dice:
-    num=num.replace('d','')
-    num = randint(1,int(num))
-    print("You rolled a: " + str(num))
-  else:
-    print("That is not a valid number, pick a valid number")
-
-# variables that should be tracked
-class main_sheet():
-  def one(self, alignment, age, ):
-    self.alignment
-
-class race:
-  
-  import math
-from random import randint
-
+# # These will be the dice the character will use. 
+# def roll(num, dice):
+#   if num in dice:
+#     num=num.replace('d','')
+#     num = randint(1,int(num))
+#     print("You rolled a: " + str(num))
+#   else:
+#     print("That is not a valid number, pick a valid number")
+# second try
 def roll(num):
     if num.startswith('d'):
         num = randint(1, int(num[1:]))
@@ -28,6 +18,19 @@ def roll(num):
     else:
         print("That is not a valid number, pick a valid number.")
 
+# Random values and lists that are helful. 
+languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", ""]
+
+# Probability of list being chosen
+languages_probabilies = print(random.choices(languages_main, cum_weights= 50, 10, 10, 5, 10, 10, 10, 5, k=1))
+
+# variables that should be tracked
+class main_sheet():
+  def __init__(self, alignment, age, ):
+    self.alignment = input("What is your character's alignment")
+    self.age = input("What is your character's age?")
+
+# The races of dnd. I am going to have a main functiona and then subdivisions.
 class Race:
     def __init__(self, speed, score, darkvision, abilities, language):
         self.speed = speed
@@ -36,6 +39,13 @@ class Race:
         self.abilities = abilities
         self.language = language
 
+class dwarf(Race):
+    def __init__(self, hill=False, mountain=False):
+        if hill:
+            super().__init__(speed=25, score=[], darkvision=True, abilities="", language="Common, Dwarvish")
+        elif mountain:
+            super().__init__(speed=, score=[], darkvision=, abilities="", language="")  
+        
 class elf(Race):
     def __init__(self, wood=False, drow=False, high=False):
         if wood:
@@ -45,33 +55,29 @@ class elf(Race):
         elif high:
             super().__init__(speed=30, score=2, darkvision=False, abilities="", language="Common, Elvish")
 
-class dwarf(Race):
-    def __init__(self, hill=False, mountain=False):
-        if hill:
-            super().__init__(speed=25, score=2, darkvision=True, abilities="", language="Common, Dwarvish")
-        elif mountain
+
 
 class halfling(Race):
   def __init__(self, speed, score, darkvision, abilities, language):
      super().__init__(speed, score, darkvision, abilities, language) 
 
 class human(Race):
-  def
+  def __init__
 
 class dragonborn(Race):
-  def
+  
 
 class gnome(Race):
-  def
+  def __init__():
 
 class halfelf(Race):
-  def
+  def __init__():
 
 class halforc(Race):
-  def 
+  def __init__(): 
 
 class tiefling(Race):
-  def
+  def __init__():
   
 class Character:
     def character(self, name, race, char_class, level, strength, dexterity, constitution, intelligence, wisdom, charisma):

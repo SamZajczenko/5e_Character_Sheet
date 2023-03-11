@@ -62,7 +62,9 @@ class elf(Race):
 
 
 # Halfling race.
-class
+class halfling(Race):
+    def __init__()
+    
 halfling_dict = {
     "halfling_abilities": "",
 }

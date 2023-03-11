@@ -19,10 +19,11 @@ def roll(num):
         print("That is not a valid number, pick a valid number.")
 
 # Random values and lists that are helful. 
-languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", ""]
+languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic"]
 
 # Probability of list being chosen
-languages_probabilies = print(random.choices(languages_main, cum_weights= 50, 10, 10, 5, 10, 10, 10, 5, k=1))
+languages_probabilities = (random.choices(languages_main, weights=( 
+20, 10, 10, 5, 10, 10, 10, 5, 5, 5, 10), k=other))
 
 # variables that should be tracked
 class main_sheet():
@@ -31,6 +32,15 @@ class main_sheet():
     self.age = input("What is your character's age?")
 
 # The races of dnd. I am going to have a main functiona and then subdivisions.
+
+score = []
+dwarf_abilities = ""
+elf_abilities = ""
+
+abilties = [[],[],]
+
+super().__init__(speed=, score=[], darkvision=, abilities="", language="")  
+
 class Race:
     def __init__(self, speed, score, darkvision, abilities, language):
         self.speed = speed
@@ -42,9 +52,9 @@ class Race:
 class dwarf(Race):
     def __init__(self, hill=False, mountain=False):
         if hill:
-            super().__init__(speed=25, score=[], darkvision=True, abilities="", language="Common, Dwarvish")
+            super().__init__(speed=25, score=[], darkvision=True, abilities=abilties, language="Common, Dwarvish")
         elif mountain:
-            super().__init__(speed=, score=[], darkvision=, abilities="", language="")  
+            super().__init__(speed=25, score=[], darkvision=True, abilities="", language="Common, Dwarvish")  
         
 class elf(Race):
     def __init__(self, wood=False, drow=False, high=False):
@@ -54,7 +64,6 @@ class elf(Race):
             super().__init__(speed=30, score=2, darkvision=True, abilities="", language="Common, Elvish")
         elif high:
             super().__init__(speed=30, score=2, darkvision=False, abilities="", language="Common, Elvish")
-
 
 
 class halfling(Race):

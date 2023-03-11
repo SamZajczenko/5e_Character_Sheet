@@ -1,6 +1,10 @@
 import math
 from random import randint
 from races import *
+from classes import *
+from dictionaries import * 
+
+# main document for all code
 
 # # These will be the dice the character will use. 
 # def roll(num, dice):
@@ -25,11 +29,6 @@ class main_sheet():
   def __init__(self, alignment, age, ):
     self.alignment = input("What is your character's alignment")
     self.age = input("What is your character's age?")
-
-# Dungeons and Dragons classes code
-class character_classes:
-  def __init__(self, hit_die, ):
-    self.hit_die = "d4"
   
 class Character:
     def character(self, name, race, char_class, level, strength, dexterity, constitution, intelligence, wisdom, charisma):
@@ -62,7 +61,3 @@ class Character:
 
 # # Show character stats
 # character.show_stats()
-
-# class Items:
-#   def items(self, armor, ):
-#     self.armor = armor 

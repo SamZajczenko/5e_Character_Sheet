@@ -11,9 +11,10 @@ scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [ch
 
 # variables that should be tracked
 class Main_sheet():
-  def one(self, alignment, age, ):
+  def one(self, alignment, age, prof_bonus,):
     self.alignment = alignment
     self.age = age
+    self.prof_bonus = 
   
 import tabulate 
   

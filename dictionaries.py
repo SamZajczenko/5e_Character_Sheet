@@ -18,3 +18,7 @@ class_abilities = {
 feats = {
     "": "",
 }
+
+skills = {
+    "": ""
+}

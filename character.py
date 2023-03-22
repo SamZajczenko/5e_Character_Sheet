@@ -8,6 +8,7 @@ from races import *
 from dictionaries import *
 
 scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [charisma]]
+table_prof_bonus = [[1-4, 2],[5-8, 3],[9-12, 4],[13-16, 5],[17-20, 6]]
 
 # variables that should be tracked
 class Main_sheet():
@@ -57,25 +58,3 @@ class Character:
       self.intelligence = intelligence
       self.wisdom = wisdom
       self.charisma = charisma
-  
-  def show_stats(self):
-      print(f"Name: {self.name}")
-      print(f"Race: {self.race}")
-      print(f"Class: {self.char_class}")
-      print(f"Level: {self.level}")
-      print(f"Strength: {self.strength}")
-      print(f"Dexterity: {self.dexterity}")
-      print(f"Constitution: {self.constitution}")
-      print(f"Intelligence: {self.intelligence}")
-      print(f"Wisdom: {self.wisdom}")
-      print(f"Charisma: {self.charisma}")
-
-# Sample character
-character = Character("Gandalf", "Human", "Wizard", 10, 8, 14, 12, 18, 16, 20)
-
-# Show character stats
-character.show_stats()
-
-class Items:
-  def items(self, armor, ):
-    self.armor = armor 

@@ -1,6 +1,19 @@
 import math
+import random
 from random import randint
-from races import *
+from character import *
+from dice import *
 from classes import *
-from main import *
+from races import *
+ 
+race_abilities = {
+    "": "",
+}
 
+class_abilities = {
+    "": "",
+}
+
+feats = {
+    "": "",
+}

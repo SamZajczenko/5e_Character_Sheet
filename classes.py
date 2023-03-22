@@ -1,8 +1,12 @@
 import math
+import random
 from random import randint
+from character import *
+from dice import *
 from races import *
-from main import *
-from dictionaries import * 
+from dictionaries import *
+
+classes = 
 
 # Dungeons and Dragons classes code
 class character_classes:

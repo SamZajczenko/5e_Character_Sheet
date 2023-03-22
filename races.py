@@ -1,8 +1,10 @@
 import math
 import random
 from random import randint
-from main import *
-from dictionaries import * 
+from character import *
+from dice import *
+from classes import *
+from dictionaries import *
 
 # Random values and lists that are helful. 
 languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic"]
@@ -14,7 +16,7 @@ languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5
 
 # The races of dnd. I am going to have a main function and then subdivisions.
 score = []
-abilties = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
+races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
 
 class Race:
     def __init__(self, speed, score, darkvision, abilities, language):

@@ -12,7 +12,7 @@ table_prof_bonus = [[1-4, 2],[5-8, 3],[9-12, 4],[13-16, 5],[17-20, 6]]
 
 # variables that should be tracked
 class Main_sheet():
-  def one(self, alignment, age, prof_bonus,):
+  def __init__(self, alignment, age, prof_bonus,):
     self.alignment = alignment
     self.age = age
     self.prof_bonus = 
@@ -47,7 +47,7 @@ def character_start():
   # charisma = print(input(""))
 
 class Character:
-  def character(self, name, race, char_class, level, strength, dexterity, constitution, intelligence, wisdom, charisma):
+  def __init__(self, name, race, char_class, level, strength, dexterity, constitution, intelligence, wisdom, charisma):
       self.name = name
       self.race = race
       self.char_class = char_class

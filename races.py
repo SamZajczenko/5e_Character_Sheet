@@ -13,7 +13,25 @@ languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", 
 # Probability of list being chosen
 languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5, 10, 10, 10, 5, 5, 5, 10), k=other))
 
-# This is to choose a what
+# This is to choose a what abilty scores you would like to increase.
+def score_increase():
+    print(tabulate(scores, classesfmt = 'fancy_grid'))
+    amount = 
+    which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
+    if which.contains(strength):
+        
+    if which.contains(dexterity):
+        
+    if which.contains(constitution):
+        
+    if which.contains(intelligence):
+        
+    if which.contains(wisdom):
+        
+    if which.contains(charisma):
+        
+    else:
+        return None
 
 # The races of dnd. I am going to have a main function and then subdivisions.
 races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
@@ -70,9 +88,12 @@ class Halfling(Race):
 
 # Human race.
 class Human(Race):
-  def __init__(self):
+  def __init__(self, variant=False):
       abilities = [none]
-      super().__init__(speed=30, score=[1,1,1,1,1,1], darkvision=False, abilities=abilities, language="Common, ")
+      if variant == True:
+        super().__init__(speed=30, score=[1,1,1,1,1,1], darkvision=False, abilities=abilities, language="Common, ")
+      else:
+          super().__init__(speed=30, score=[], darkvision=False, abilities=None, languages="Common, ")
 
 # Dragonborn race.
 class Dragonborn(Race):

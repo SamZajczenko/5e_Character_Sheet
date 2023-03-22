@@ -1,5 +1,6 @@
 import math
 import random
+from tabulate import tabulate
 from random import randint
 from character import *
 from dice import *
@@ -15,7 +16,6 @@ languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5
 
 
 # The races of dnd. I am going to have a main function and then subdivisions.
-score = []
 races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
 
 class Race:
@@ -31,13 +31,13 @@ class Dwarf(Race):
     def __init__(self, hill=False, mountain=False):
         abilities = ["darkvision", "dwarven resilience", "stonecunning"]
         if hill:
-            super().__init__(speed=25, score=[2, 0, 2, 0, 0, -2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
+            super().__init__(speed=25, score=[2, 0, 2, 0, 0, 2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
             self.abilities.append("dwarven toughness")
         elif mountain:
-            super().__init__(speed=25, score=[2, 0, 2, 0, 0, -2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
+            super().__init__(speed=25, score=[2, 0, 2, 0, 0, 2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
             self.abilities.append("dwarven armor training")
         else:
-            super().__init__(speed=25, score=[2, 0, 2, 0, 0, -2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
+            super().__init__(speed=25, score=[2, 0, 2, 0, 0, 2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
 
     dwarf_dict = {
         "dwarf_abilities": ["darkvision", "dwarven resilience", "stonecunning"],
@@ -51,14 +51,15 @@ class Dwarf(Race):
 # Elven race.
 class Elf(Race):
     def __init__(self, wood=False, drow=False, high=False):
+        abilities = []
         if wood:
-            super().__init__(speed=35, score=[0,2,0,0,1,0], darkvision=True, abilities="", language="Common, Elvish")
+            super().__init__(speed=35, score=[0,2,0,0,1,0], darkvision=True, abilities=abilities, language="Common, Elvish")
         elif drow:
-            super().__init__(speed=30, score=[0,2,0,0,0,1], darkvision=True, abilities="", language="Common, Elvish")
+            super().__init__(speed=30, score=[0,2,0,0,0,1], darkvision=True, abilities=abilities, language="Common, Elvish")
         elif high:
-            super().__init__(speed=30, score=[0,2,0,1,0,0], darkvision=False, abilities="", language="Common, Elvish")
+            super().__init__(speed=30, score=[0,2,0,1,0,0], darkvision=False, abilities=abilities, language="Common, Elvish")
         else:
-            super().__init__(speed=30, score=[0,2,0,0,0,0], darkvision=False, abilities="", language="Common, Elvish")
+            super().__init__(speed=30, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Elvish")
     
     elf_dict = {
         "elf_abilities": ["darkvision", "keen sense", "fey ancestry", "trance"],
@@ -81,7 +82,7 @@ class Halfling(Race):
             super().__init__(speed=25, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Halfling") 
     
     halfling_dict = {
-        "halfling_abilities": ["lucky"],
+        "halfling_abilities": ["lucky",],
         "lightfoot_halfling_abilities": , 
         "stout_halfling_abilities": , 
     }

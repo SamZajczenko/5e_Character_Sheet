@@ -1,5 +1,6 @@
 import math
 import random
+from tabulate import tabulate
 from random import randint
 from character import *
 from dice import *

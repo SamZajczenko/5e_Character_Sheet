@@ -1,12 +1,13 @@
 import math
 import random
+from tabulate import tabulate
 from random import randint
 from dice import *
 from classes import *
 from races import *
 from dictionaries import *
 
-scores = [strength, dexterity, constitution, intelligence, wisdom, charisma]
+scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [charisma]]
 
 # variables that should be tracked
 class Main_sheet():

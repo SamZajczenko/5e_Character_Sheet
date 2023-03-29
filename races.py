@@ -14,21 +14,40 @@ languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", 
 languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5, 10, 10, 10, 5, 5, 5, 10), k=other))
 
 # This is to choose a what abilty scores you would like to increase.
+def race_mod():
+    if race == races[0]:
+        
+    elif race == races[1]:
+        
+    elif race == races[2]:
+        
+    elif race == races[3]:
+        
+    elif race == races[4]:
+        
+    elif race == races[5]:
+        
+    elif race == races[6]:
+        
+    elif race == races[7]:
+        
+    elif race == races[8]:
+
 def score_increase():
     print(tabulate(scores, classesfmt = 'fancy_grid'))
     amount = 
     which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
     if which.contains(strength):
         
-    if which.contains(dexterity):
+    elif which.contains(dexterity):
+
+    elif which.contains(constitution):
         
-    if which.contains(constitution):
+    elif which.contains(intelligence):
         
-    if which.contains(intelligence):
+    elif which.contains(wisdom):
         
-    if which.contains(wisdom):
-        
-    if which.contains(charisma):
+    elif which.contains(charisma):
         
     else:
         return None
@@ -103,12 +122,12 @@ class Dragonborn(Race):
 # Gnome race.
 class Gnome(Race):
   def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed, score, darkvision, abilities, language)
+      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, and Gnomish")
 
 # Half-Elf
 class Half_elf(Race):
   def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed, score, darkvision, abilities, language)
+      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, ")
 
 # Half Orc
 class Half_orc(Race):

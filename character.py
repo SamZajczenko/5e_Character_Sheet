@@ -15,7 +15,7 @@ class Main_sheet():
   def __init__(self, alignment, age, prof_bonus,):
     self.alignment = alignment
     self.age = age
-    self.prof_bonus = 
+    self.prof_bonus = prof_bonus 
   
 import tabulate 
   
@@ -37,7 +37,7 @@ def character_start():
      amount_class = print("How many classes do you want to have? ")
      
   priority = print(input("Do you want to prioritze any modifiers, or follow the book? "))
-  if priority.contains(book):
+  if priority.contains("book" or "" or ""):
     
   # strength = print(input(""))
   # dexterity = print(input(""))

@@ -2,6 +2,7 @@ import math
 import random
 from tabulate import tabulate
 from random import randint
+
 from character import *
 from dice import *
 from classes import *
@@ -15,23 +16,12 @@ languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5
 
 # This is to choose a what abilty scores you would like to increase.
 def race_mod():
-    if race == races[0]:
-        
-    elif race == races[1]:
-        
-    elif race == races[2]:
-        
-    elif race == races[3]:
-        
-    elif race == races[4]:
-        
-    elif race == races[5]:
-        
-    elif race == races[6]:
-        
-    elif race == races[7]:
-        
-    elif race == races[8]:
+    
+# num = [0,1,2,3,4,5,6,7,8,9]
+# for i in range(len(num)):
+#     if races[i] == race:
+#         races[i] += 1
+#         return "Complete."
 
 def score_increase():
     print(tabulate(scores, classesfmt = 'fancy_grid'))
@@ -112,16 +102,19 @@ class Human(Race):
       if variant == True:
         super().__init__(speed=30, score=[1,1,1,1,1,1], darkvision=False, abilities=abilities, language="Common, ")
       else:
-          super().__init__(speed=30, score=[], darkvision=False, abilities=None, languages="Common, ")
+          super().__init__(speed=30, score="", darkvision=False, abilities=None, languages="Common, ")
 
 # Dragonborn race.
 class Dragonborn(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, ")
+  def __init__(self, ):
+      abilities = ["draconic ancestry","breath weapon","damage resistance"]
+      dragonborn_kinds = [["black", "acid"],["blue", "lightning"],["brass", "fire"],["bronze", "lightning"],["copper", "acid"],["gold", "fire"],["green", "poison"],["red", "fire"],["silver", "cold"],["white", "cold"]]
+        
+            super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, Draconic")
   
 # Gnome race.
 class Gnome(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
+  def __init__(self, ):
       super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, and Gnomish")
 
 # Half-Elf

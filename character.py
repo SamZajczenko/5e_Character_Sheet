@@ -38,7 +38,7 @@ def character_start():
      
   priority = print(input("Do you want to prioritze any modifiers, or follow the book? "))
   if priority.contains("book" or "" or ""):
-    
+    pass
   # strength = print(input(""))
   # dexterity = print(input(""))
   # constitution = print(input(""))

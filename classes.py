@@ -12,4 +12,5 @@ classes = [[barbarian], [bard], [cleric], [druid], [fighter], [monk], [paladin],
 # Dungeons and Dragons classes code
 class Character_classes:
   def __init__(self, hit_die, ):
-    self.hit_die = 
+    self.hit_die = hit_dice
+    

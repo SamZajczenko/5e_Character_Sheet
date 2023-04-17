@@ -3,10 +3,9 @@ import random
 from tabulate import tabulate
 from random import randint
 
-from character import *
-from dice import *
-from classes import *
-from dictionaries import *
+def race():
+  print(tabulate(races, racesfmt = 'fancy_grid'))
+  race = print(input("What is your character race? Choose from the values above. "))
 
 # Random values and lists that are helful. 
 languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic"]
@@ -16,31 +15,30 @@ languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5
 
 # This is to choose a what abilty scores you would like to increase.
 def race_mod():
-    
-# num = [0,1,2,3,4,5,6,7,8,9]
-# for i in range(len(num)):
-#     if races[i] == race:
-#         races[i] += 1
-#         return "Complete."
+    num = [0,1,2,3,4,5,6,7,8,9]
+    for i in range(len(num)):
+        if races[i] == race:
+            races[i] += 1
+            print("Complete.")
 
-def score_increase():
-    print(tabulate(scores, classesfmt = 'fancy_grid'))
-    amount = 
-    which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
-    if which.contains(strength):
+# def score_increase():
+#     print(tabulate(scores, classesfmt = 'fancy_grid'))
+#     amount = 
+#     which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
+#     if which.contains(strength):
         
-    elif which.contains(dexterity):
+#     elif which.contains(dexterity):
 
-    elif which.contains(constitution):
+#     elif which.contains(constitution):
         
-    elif which.contains(intelligence):
+#     elif which.contains(intelligence):
         
-    elif which.contains(wisdom):
+#     elif which.contains(wisdom):
         
-    elif which.contains(charisma):
+#     elif which.contains(charisma):
         
-    else:
-        return None
+#     else:
+#         return None
 
 # The races of dnd. I am going to have a main function and then subdivisions.
 races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
@@ -106,11 +104,10 @@ class Human(Race):
 
 # Dragonborn race.
 class Dragonborn(Race):
-  def __init__(self, ):
-      abilities = ["draconic ancestry","breath weapon","damage resistance"]
-      dragonborn_kinds = [["black", "acid"],["blue", "lightning"],["brass", "fire"],["bronze", "lightning"],["copper", "acid"],["gold", "fire"],["green", "poison"],["red", "fire"],["silver", "cold"],["white", "cold"]]
-        
-            super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, Draconic")
+  def __init__(self, abilities, dragonborn_kinds):
+        self.abilities = ["draconic ancestry","breath weapon","damage resistance"]
+        self.dragonborn_kinds = [["black", "acid"],["blue", "lightning"],["brass", "fire"],["bronze", "lightning"],["copper", "acid"],["gold", "fire"],["green", "poison"],["red", "fire"],["silver", "cold"],["white", "cold"]]
+        super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, Draconic")
   
 # Gnome race.
 class Gnome(Race):

@@ -7,4 +7,5 @@ from random import randint
 # from classes import *
 # from races import *
 # from dictionaries import *
+from pdf import *
 

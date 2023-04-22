@@ -92,49 +92,53 @@ class Elf(Race):
         else:
             super().__init__(speed=30, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Elvish")
 
-# Halfling race.
 class Halfling(Race):
     def __init__(self, lightfoot=False, stout=False):
-        abilities = ["lucky","halfling nimbleness","brave"]
-        if lightfoot:   
-            super().__init__(speed=25, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Halfling") 
+        abilities = ["lucky", "halfling nimbleness", "brave"]
+        if lightfoot:
+            super().__init__(speed=25, score=[0, 2, 0, 0, 0, 0], darkvision=False, abilities=abilities, languages="Common, Halfling")
             self.abilities.append("naturally stealthy")
-        if stout:
-            super().__init__(speed=25, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Halfling") 
+        elif stout:
+            super().__init__(speed=25, score=[0, 2, 1, 0, 0, 0], darkvision=False, abilities=abilities, languages="Common, Halfling")
             self.abilities.append("stout resilience")
         else:
-            super().__init__(speed=25, score=[0,2,0,0,0,0], darkvision=False, abilities=abilities, language="Common, Halfling") 
+            super().__init__(speed=25, score=[0, 2, 0, 0, 0, 0], darkvision=False, abilities=abilities, languages="Common, Halfling")
 
-# Human race.
 class Human(Race):
-  def __init__(self, variant=False):
-      abilities = [none]
-      if variant == True:
-        super().__init__(speed=30, score=[1,1,1,1,1,1], darkvision=False, abilities=abilities, language="Common, ")
-      else:
-          super().__init__(speed=30, score=[], darkvision=False, abilities=None, languages="Common, ")
+    def __init__(self, variant=False):
+        abilities = []
+        if variant:
+            super().__init__(speed=30, score=[1, 1, 1, 1, 1, 1], darkvision=False, abilities=abilities, languages="Common")
+        else:
+            super().__init__(speed=30, score=[0, 0, 0, 0, 0, 0], darkvision=False, abilities=abilities, languages="Common")
 
-# Dragonborn race.
 class Dragonborn(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, ")
-  
-# Gnome race.
+    def __init__(self, score):
+        abilities = ["draconic ancestry", "breath weapon"]
+        super().__init__(speed=30, score=score, darkvision=False, abilities=abilities, languages="Common, Draconic")
+
 class Gnome(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, and Gnomish")
+    def __init__(self, forest=False, rock=False):
+        abilities = ["gnome cunning"]
+        if forest:
+            super().__init__(speed=25, score=[0, 2, 0, 0, 0, 1], darkvision=True, abilities=abilities, languages="Common, Gnomish")
+            self.abilities.append("natural illusionist")
+        elif rock:
+            super().__init__(speed=25, score=[0, 2, 1, 0, 0, 0], darkvision=True, abilities=abilities, languages="Common, Gnomish")
+            self.abilities.append("artificer's lore")
+        else:
+            super().__init__(speed=25, score=[0, 2, 0, 0, 0, 0], darkvision=True, abilities=abilities, languages="Common, Gnomish")
 
-# Half-Elf
 class Half_elf(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, ")
+    def __init__(self, score):
+        abilities = ["darkvision", "fey ancestry", "skill versatility"]
+        super().__init__(speed=30, score=score, darkvision=True, abilities=abilities, languages="Common, Elvish")
 
-# Half Orc
 class Half_orc(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed, score, darkvision, abilities, language)
+    def __init__(self, score):
+        abilities = ["darkvision", "menacing", "relentless endurance", "savage attacks"]
+        super().__init__(speed=30, score=score, darkvision=True, abilities=abilities, languages="Common, Orcish")
 
-# Tiefling
 class Tiefling(Race):
-  def __init__(self, speed, score, darkvision, abilities, language):
-      super().__init__(speed, score, darkvision, abilities, language)
+    def __init__(self, speed=30, score=[0, 0, 0, 1, 0, 2], darkvision=True, abilities=["hellish resistance", "infernal legacy"], language="Common, Infernal"):
+        super().__init__(speed, score, darkvision, abilities, language)

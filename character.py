@@ -1,27 +1,5 @@
 from probabilities import *
-
-classes = [[barbarian], [bard], [cleric], [druid], [fighter], [monk], [paladin], [ranger], [rogue], [sorcerer], [warlock], [wizard]]
-
-races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
-
-scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [charisma]]
-
-# Level then bonus. 
-table_prof_bonus = [0-4, 2],[5-8, 3],[9-12, 4],[13-16, 5],[17-20, 6] 
-
-def races():
-  print(tabulate(races, racesfmt = 'fancy_grid'))
-
-def char_classes():
-  print(tabulate(classes, classesfmt = 'fancy_grid'))
-
-
-modifiers = [(-5, i) if i == 0 else ((i - 1) // 2 - 5, i) for i in range(31)]
-
-def passive_wis(wisdom, modifiers):
-  i = wisdom
-  passive_wisdom = 10 + modifiers(i) 
-  return passive_wisdom  
+from classes import *
 
 class Character:
   def __init__(self,name,race,char_class,level,strength,dexterity,constitution,intelligence,wisdom,charisma,skill_prof,armor_class,hit_points,weapons,equipment,all_prof,personality_traits,ideals,bonds,flaws, features_traits, spells, spell_save_DC, spell_attack_bonus):

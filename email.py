@@ -5,7 +5,6 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-
 def email():
     # Attachment for organization.
     email = input("What email would you like your character sheet to be sent to? ")
@@ -24,7 +23,7 @@ def email():
     msg.attach(part)
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login("", "")
+    server.login("samzajc@gmail.com", "")
     text = msg.as_string()
     server.sendmail(msg['From'], msg['To'], text)
     server.quit()

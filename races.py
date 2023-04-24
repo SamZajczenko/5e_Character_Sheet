@@ -1,17 +1,6 @@
 import math
 import random
-from tabulate import tabulate
 from random import randint
-
-def race():
-  print(tabulate(races, racesfmt = 'fancy_grid'))
-  race = print(input("What is your character race? Choose from the values above. "))
-
-# Random values and lists that are helful. 
-languages_main = ["Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic"]
-
-# Probability of list being chosen
-languages_probabilities = (random.choices(languages_main, weights=(20, 10, 10, 5, 10, 10, 10, 5, 5, 5, 10), k=other))
 
 # This is to choose a what abilty scores you would like to increase.
 def race_mod():
@@ -51,7 +40,6 @@ class Race:
         self.abilities = abilities
         self.language = language
 
-# Dwarven race.
 class Dwarf(Race):
     def __init__(self, hill=False, mountain=False):
         abilities = ["darkvision", "dwarven resilience", "stonecunning"]
@@ -64,7 +52,6 @@ class Dwarf(Race):
         else:
             super().__init__(speed=25, score=[2,0,2,0,0,2], darkvision=True, abilities=abilities, language="Common, Dwarvish")
     
-# Elven race.
 class Elf(Race):
     def __init__(self, wood=False, drow=False, high=False):
         abilities = ["darkvision", "keen sense", "fey ancestry", "trance"]
@@ -104,7 +91,6 @@ class Dragonborn(Race):
   def __init__(self, speed, score, darkvision, abilities, language):
       super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, ")
   
-# Gnome race.
 class Gnome(Race):
   def __init__(self, speed, score, darkvision, abilities, language):
       super().__init__(speed=30, score=[], darkvision=True, abilities=abilities, language="Common, and Gnomish")

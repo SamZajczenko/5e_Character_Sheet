@@ -43,7 +43,7 @@ class Class_Main:
         self.spells = spells
         self.spell_save_DC = spell_save_DC
         self.spell_attack_bonus = spell_attack_bonus
-        self.money = money
+        self.money = 0
 
     def money_sub(x,y):
         money = 0
@@ -67,12 +67,16 @@ class Class_Main:
         else:
             None
     
-    def armor():
-        armors = [[light armor, ], ]
+    def armor()":
+        armors = [["light armor, [["padded,5]["leather,10]["studded leather]]], ]
         armor_comp = armors.zip([])
         print(tabulate(armors, armorsfmt = 'fancy_grid'))
         choice = input("What armor would you like to use? ")
         if self.money == 
+        
+        if choice == armors[0][0 or 1][0]:
+        
+        elif choice == armors[0][2][0]:
             
             
 class Barbarian(Class_Main):

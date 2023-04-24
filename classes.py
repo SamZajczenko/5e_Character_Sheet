@@ -43,36 +43,40 @@ class Class_Main:
         self.spell_attack_bonus = spell_attack_bonus
         self.money = 0
 
-    def money_sub(x,y):
-        money = 0
-        for i in range(x): 
-            money + (roll_computer(4))
-        money * y
-        print(money)
-    
-    def money_calc():
-        if char_class == classes[0 or 3]:
-            money_sub(2,10)
-        elif char_class == classes[1 or 2 or 4 or 6 or 7]:
-            money_sub(5,10)
-        elif char_class == classes[5]:
-            money_sub(5,1)
-        elif char_class == classes[8 or 10 or 11]:
-            money_sub(4,10)
-        elif char_class == classes[9]:
-            money_sub(3,10)
-        else:
-            print("Error.")
+   
     
     def armor():
-        armors = 
-        [
-            ["light armor", ["padded",5]["leather",10]["studded leather",45]]
-        ]
-        armor_comp = armors.zip([])
-        print(tabulate(armors, armorsfmt = 'fancy_grid'))
+        armors = [
+            ["light armor", ["padded",5]["leather",10]["studded leather",45]],
+            ["medium armor", ["hide", 10]["chain shirt", 50]["scale mail", 50]["breastplate", 400]["half plate", 750]],
+            ["heavy armor",["ring mail", 30]["chain mail", 75]["splint", 17]["plate", 18]]
+            ]
+        armors_display = [
+            ["light armor", ["padded",5]["leather",10]["studded leather",45]],
+            ["medium armor", ["hide", 10]["chain shirt", 50]["scale mail", 50]["breastplate", 400]["half plate", 750]],
+            ["heavy armor",["ring mail", 30]["chain mail", 75]["splint", 17]["plate", 18]]
+            ]
+        # Sheild, money, and bonus onto AC
+        sheild = [sheild, 10, 2]
+        print(tabulate(armors_display, armors_displayfmt = 'fancy_grid'))
         choice = input("What armor would you like to use? ")
-        if self.money == 
+        if choice == armors[]:
+            if money == armors[]:
+                value = armor_class[]
+                money -= value
+                armor_class = armors[]
+            else:
+                print("")
+        elif choice == armors[]:
+            if money == armors[]:
+                value = armor_class[]
+                money -= value
+                armor_class = armors[]
+            else:
+                print("")
+            
+        else:
+            None
         
         if choice == armors[0][0 or 1][0]:
         

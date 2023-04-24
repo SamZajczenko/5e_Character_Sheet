@@ -48,6 +48,8 @@ def scores():
     list.sort(reverse=True)
     total = sum(list[:3])
     return total
+
+
   
 def ability_scores(char_class):
   player_scores = []

@@ -1,36 +1,3 @@
-import math
-import random
-from random import randint
-
-# This is to choose a what abilty scores you would like to increase.
-def race_mod():
-    num = [0,1,2,3,4,5,6,7,8,9]
-    for i in range(len(num)):
-        if races[i] == race:
-            races[i] += 1
-            print("Complete.")
-
-# def score_increase():
-#     print(tabulate(scores, classesfmt = 'fancy_grid'))
-#     amount = 
-#     which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
-#     if which.contains(strength):
-        
-#     elif which.contains(dexterity):
-
-#     elif which.contains(constitution):
-        
-#     elif which.contains(intelligence):
-        
-#     elif which.contains(wisdom):
-        
-#     elif which.contains(charisma):
-        
-#     else:
-#         return None
-
-# The races of dnd. I am going to have a main function and then subdivisions.
-races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
 
 class Race:
     def __init__(self, speed, score, darkvision, abilities, language):
@@ -39,6 +6,37 @@ class Race:
         self.darkvision = darkvision
         self.abilities = abilities
         self.language = language
+        
+    
+    # # This is to choose a what abilty scores you would like to increase.
+    # # def race_mod():
+    # #     num = [0,1,2,3,4,5,6,7,8,9]
+    # #     for i in range(len(num)):
+    # #         if races[i] == race:
+    # #             races[i] += 1
+    # #             print("Complete.")
+
+    # # def score_increase():
+    # #     print(tabulate(scores, classesfmt = 'fancy_grid'))
+    # #     amount = 
+    # #     which = print(input(f'What scores would you like to increase, you may choose {amount}. Choose from the list above. '))
+    # #     if which.contains(strength):
+            
+    # #     elif which.contains(dexterity):
+
+    # #     elif which.contains(constitution):
+            
+    # #     elif which.contains(intelligence):
+            
+    # #     elif which.contains(wisdom):
+            
+    # #     elif which.contains(charisma):
+            
+    # #     else:
+    # #         return None
+
+    # # The races of dnd. I am going to have a main function and then subdivisions.
+    # races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
 
 class Dwarf(Race):
     def __init__(self, hill=False, mountain=False):

@@ -1,89 +1,20 @@
-import math
-import random
 from probabilities import *
 
-
 classes = [[barbarian], [bard], [cleric], [druid], [fighter], [monk], [paladin], [ranger], [rogue], [sorcerer], [warlock], [wizard]]
+
 races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
+
 scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [charisma]]
+
 # Level then bonus. 
 table_prof_bonus = [0-4, 2],[5-8, 3],[9-12, 4],[13-16, 5],[17-20, 6] 
 
-def race():
+def races():
   print(tabulate(races, racesfmt = 'fancy_grid'))
 
-def char_class():
+def char_classes():
   print(tabulate(classes, classesfmt = 'fancy_grid'))
-  
-name = None
-char_race = None
-class_choice = None
-level = None
 
-def character_start(name, char_race, class_choice, level):
-  name = print(input("What is your character's name? \n")).lower()
-  
-  race()
-  char_race = print(input("What is your character race? Choose from the values above. "))
-  
-  char_class()
-  class_choice = print(input("What class is your character? Choose from the list above. "))
-  
-  level = print(input("What is your character's level? Choose from 1-20. ")).lower()
-  
-  return name, char_race, class_choice, level
-  
-  # Increase or Feats if correct level.
-  # Background
-  # Multi Classing  
-  # multi_class = print(input("Would you like to multiclass? (y/n) \n")).lower()
-  # if multi_class == "yes":
-  #    amount_class = print("How many classes do you want to have? ")
-  
-def scores():
-    num_computer = 6
-    list = []
-    for i in range(4):
-        list.append(roll_computer(num_computer))
-    list.sort(reverse=True)
-    total = sum(list[:3])
-    return total
-
-
-  
-def ability_scores(char_class):
-  player_scores = []
-  for i in range(6):
-    player_scores.append(scores())
-  player_scores.sort(reverse=True)
-  if class_choice == classes[0]:
-
-  elif class_choice == classes[1]:
-
-  elif class_choice == classes[2]:
-
-  elif class_choice == classes[3]:
-
-  elif class_choice == classes[4]:
-
-  elif class_choice == classes[5]:
-
-  elif class_choice == classes[6]:
-
-  elif class_choice == classes[7]:
-
-  elif class_choice == classes[8]:
-
-  elif class_choice == classes[9]:
-
-  elif class_choice == classes[10]:
-
-  elif class_choice == classes[11]:
-
-  else:
-    None
-    
-    
 
 modifiers = [(-5, i) if i == 0 else ((i - 1) // 2 - 5, i) for i in range(31)]
 
@@ -118,3 +49,44 @@ class Character:
       self.spells = spells
       self.spell_save_DC = spell_save_DC
       self.spell_attack_bonus = spell_attack_bonus
+      
+  def scores():
+    num_computer = 6
+    list = []
+    for i in range(4):
+        list.append(roll_computer(num_computer))
+    list.sort(reverse=True)
+    total = sum(list[:3])
+    return total
+  
+  def ability_scores(char_class):
+    player_scores = []
+    for i in range(6):
+      player_scores.append(scores())
+    player_scores.sort(reverse=True)
+    if char_class == classes[0]:
+      Barbarian.scores(player_scores)
+    elif char_class == classes[1]:
+      Bard.scores(player_scores)
+    elif char_class == classes[2]:
+      Cleric.scores(player_scores)
+    elif char_class == classes[3]:
+      Druid.scores(player_scores)
+    elif char_class == classes[4]:
+      Fighter.scores(player_scores)
+    elif char_class == classes[5]:
+      Monk.scores(player_scores)
+    elif char_class == classes[6]:
+      Paladin.scores(player_scores)
+    elif char_class == classes[7]:
+      Ranger.scores(player_scores)
+    elif char_class == classes[8]:
+      Rogue.scores(player_scores)
+    elif char_class == classes[9]:
+      Sorcerer.scores(player_scores)
+    elif char_class == classes[10]:
+      Warlock.scores(player_scores)
+    elif char_class == classes[11]:
+      Wizard.scores(player_scores)
+    else:
+      None

@@ -1,16 +1,13 @@
-import math
-import random
-from random import randint
-# from character import *
-from probabilities import *
-# from classes import *
-# from races import *
-# from dictionaries import *
+# from character_and_pdf import *
+# from email import *
 
-# Running Character Code
-# character_start()
-
+# Everthing passes through character_and_pdf.py and then runs through to main. 
 # Running PDF Creation Code
 
+character_creation()
 
+# ##################################################################################
+# Everthing runs through email.py then to main.py.
 # Running Email Code
+
+email()

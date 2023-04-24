@@ -3,11 +3,9 @@ import math
 from races import *
 from probabilities import *
 
-classes = [[barbarian], [bard], [cleric], [druid], [fighter], [monk], [paladin], [ranger], [rogue], [sorcerer], [warlock], [wizard]]
-
-races = [["dwarf"],["elf"],["halfling"],["human"],["dragonborn"],["gnome"],["half_elf"],["half_orc"],["tiefling"]]
-
-scores = [[strength], [dexterity], [constitution], [intelligence], [wisdom], [charisma]]
+classes = ["barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]
+races = ["dwarf","elf","halfling","human","dragonborn","gnome","half_elf","half_orc","tiefling"]
+scores = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
 
 # Level then bonus. 
 table_prof_bonus = [0-4, 2],[5-8, 3],[9-12, 4],[13-16, 5],[17-20, 6] 
@@ -53,7 +51,6 @@ class Class_Main:
         print(money)
     
     def money_calc():
-        x = None
         if char_class == classes[0 or 3]:
             money_sub(2,10)
         elif char_class == classes[1 or 2 or 4 or 6 or 7]:
@@ -65,10 +62,13 @@ class Class_Main:
         elif char_class == classes[9]:
             money_sub(3,10)
         else:
-            None
+            print("Error.")
     
-    def armor()":
-        armors = [["light armor, [["padded,5]["leather,10]["studded leather]]], ]
+    def armor():
+        armors = 
+        [
+            ["light armor", ["padded",5]["leather",10]["studded leather",45]]
+        ]
         armor_comp = armors.zip([])
         print(tabulate(armors, armorsfmt = 'fancy_grid'))
         choice = input("What armor would you like to use? ")
